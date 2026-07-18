@@ -37,11 +37,9 @@ jobs:
       - name: Install dependencies
         if: steps.node-modules-cache.outputs.cache-hit != 'true'
         run: |
-          npm config set fetch-timeout 60000
-          npm config set fetch-retries 3
-          npm config set fetch-retry-mintimeout 10000
-          npm config set fetch-retry-maxtimeout 60000
-          npm ci
+          npm install -g npm@latest
+          npm --version
+          npm ci --no-audit --no-fund
         env:
           PUPPETEER_SKIP_DOWNLOAD: "true"
           PUPPETEER_SKIP_CHROME_DOWNLOAD: "true"
