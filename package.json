@@ -1,0 +1,30 @@
+{
+  "name": "apollo-11-3d-experience",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "check": "tsc -b --pretty false",
+    "qa:mobile": "xvfb-run -a node tests/browser/mobile-smoke.mjs",
+    "qa:fallback": "xvfb-run -a node tests/browser/fallback-smoke.mjs",
+    "qa:chapter": "xvfb-run -a node tests/browser/chapter-smoke.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "1.25.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.185.1",
+    "@vitejs/plugin-react": "6.0.3",
+    "puppeteer-core": "25.3.0",
+    "typescript": "7.0.2",
+    "vite": "8.1.5"
+  }
+}
